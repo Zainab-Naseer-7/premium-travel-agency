@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURORA TRAVEL | Luxury Travel Marketplace, Smart Trip Planner & Curated Stays</title>
+  <meta name="description" content="Discover extraordinary luxury destinations, bespoke itineraries, 5-star private stays, first-class flights, and curated experiences worldwide with Aurora Travel.">
+  <meta name="keywords" content="luxury travel, bespoke itineraries, 5-star hotels, private villas, first class flights, luxury vacations, trip planner">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+  
+  <!-- Google Fonts: Playfair Display for luxury editorial & Plus Jakarta Sans for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Pro / Free CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Primary CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="luxury-theme" id="top">
+
+  <!-- TOP ANNOUNCEMENT / CONCIERGE BAR -->
+  <aside class="top-announcement" aria-label="VIP Concierge Alert">
+    <div class="announcement-content container">
+      <span class="announcement-pill"><i class="fa-solid fa-crown"></i> VIP CONCIERGE</span>
+      <p class="announcement-text">Complimentary Private Chauffeur & Helicopter Transfers on all 2026 Alpine & Atoll Journeys.</p>
+      <div class="announcement-actions">
+        <a href="#deals" class="announcement-link">Explore Exclusive Privileges <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- STICKY GLASS NAVBAR -->
+  <header class="navbar-wrapper" id="mainNavbar">
+    <div class="navbar-container container">
+      
+      <!-- Brand Logo -->
+      <a href="#top" class="brand-logo" aria-label="Aurora Travel Homepage">
+        <div class="logo-symbol">
+          <i class="fa-solid fa-compass-drafting"></i>
+          <span class="glow-orb"></span>
+        </div>
+        <div class="logo-text-group">
+          <span class="brand-name">AURORA<span class="brand-accent">TRAVEL</span></span>
+          <span class="brand-tagline">Discover More. Travel Better.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#top" class="nav-link active" data-nav="home">Home</a></li>
+          <li><a href="#destinations" class="nav-link" data-nav="destinations">Destinations</a></li>
+          <li><a href="#stays" class="nav-link" data-nav="stays">Stays</a></li>
+          <li><a href="#flights" class="nav-link" data-nav="flights">Flights</a></li>
+          <li><a href="#experiences" class="nav-link" data-nav="experiences">Experiences</a></li>
+          <li><a href="#packages" class="nav-link" data-nav="packages">Packages</a></li>
+          <li><a href="#planner" class="nav-link" data-nav="planner">AI Planner</a></li>
+          <li><a href="#mapSection" class="nav-link" data-nav="map">Map</a></li>
+          <li><a href="#magazine" class="nav-link" data-nav="magazine">Guides</a></li>
+          <li><a href="#deals" class="nav-link" data-nav="deals">Deals</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utility Tools (Currency, Notifications, Wishlist, User, CTA) -->
+      <div class="nav-utilities">
+        
+        <!-- Currency Selector Dropdown -->
+        <div class="util-dropdown" id="currencyDropdown">
+          <button class="util-btn dropdown-toggle" id="currencyBtn" aria-label="Select Currency" aria-haspopup="true" aria-expanded="false">
+            <span class="currency-symbol">$</span>
+            <span class="currency-code" id="activeCurrencyCode">USD</span>
+            <i class="fa-solid fa-chevron-down caret-icon"></i>
+          </button>
+          <div class="dropdown-menu" id="currencyMenu">
+            <button class="dropdown-item active" data-currency="USD" data-symbol="$" data-rate="1.0">
+              <span class="curr-flag">🇺🇸</span> <strong>USD</strong> ($) - US Dollar
+            </button>
+            <button class="dropdown-item" data-currency="EUR" data-symbol="€" data-rate="0.92">
+              <span class="curr-flag">🇪🇺</span> <strong>EUR</strong> (€) - Euro
+            </button>
+            <button class="dropdown-item" data-currency="GBP" data-symbol="£" data-rate="0.78">
+              <span class="curr-flag">🇬🇧</span> <strong>GBP</strong> (£) - British Pound
+            </button>
+            <button class="dropdown-item" data-currency="AED" data-symbol="د.إ" data-rate="3.67">
+              <span class="curr-flag">🇦🇪</span> <strong>AED</strong> (د.إ) - UAE Dirham
+            </button>
+            <button class="dropdown-item" data-currency="JPY" data-symbol="¥" data-rate="154.0">
+              <span class="curr-flag">🇯🇵</span> <strong>JPY</strong> (¥) - Japanese Yen
+            </button>
+          </div>
+        </div>
+
+        <!-- Wishlist / Favorites Trigger Button -->
+        <button class="util-btn icon-btn" id="openFavoritesBtn" aria-label="View Saved Wishlist" title="Saved Favorites">
+          <i class="fa-solid fa-heart"></i>
+          <span class="badge-count" id="favoritesCount">0</span>
+        </button>
+
+        <!-- Notification Center Trigger Button -->
+        <div class="util-dropdown" id="notificationWrapper">
+          <button class="util-btn icon-btn" id="openNotificationsBtn" aria-label="View Notifications" title="Notifications">
+            <i class="fa-solid fa-bell"></i>
+            <span class="badge-count" id="notificationsCount">3</span>
+          </button>
+          <div class="dropdown-menu notification-menu" id="notificationsDropdown">
+            <div class="notif-header">
+              <h6>Notifications</h6>
+              <button class="btn-text-sm" id="markAllReadBtn">Mark all read</button>
+            </div>
+            <ul class="notif-list" id="notifList">
+              <!-- Dynamically populated via app.js -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- User Authentication & Profile Trigger -->
+        <div class="user-auth-wrapper" id="userAuthContainer">
+          <button class="util-btn user-btn" id="openAuthBtn" aria-label="User Account">
+            <div class="user-avatar-sm" id="navAvatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <span class="user-name-label" id="navUserName">Sign In</span>
+          </button>
+        </div>
+
+        <!-- Primary Glowing CTA -->
+        <a href="#planner" class="btn btn-gold btn-glowing btn-nav-cta">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Plan a Trip</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-header">
+        <div class="drawer-brand">
+          <i class="fa-solid fa-compass-drafting text-gold"></i>
+          <span>AURORA TRAVEL</span>
+        </div>
+        <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close navigation menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="drawer-body">
+        <nav class="drawer-nav">
+          <a href="#top" class="drawer-link active"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="#destinations" class="drawer-link"><i class="fa-solid fa-earth-americas"></i> Destinations</a>
+          <a href="#stays" class="drawer-link"><i class="fa-solid fa-hotel"></i> Luxury Stays</a>
+          <a href="#flights" class="drawer-link"><i class="fa-solid fa-plane-departure"></i> Private & Commercial Flights</a>
+          <a href="#experiences" class="drawer-link"><i class="fa-solid fa-compass"></i> Bespoke Experiences</a>
+          <a href="#packages" class="drawer-link"><i class="fa-solid fa-box-archive"></i> Curated Packages</a>
+          <a href="#planner" class="drawer-link"><i class="fa-solid fa-wand-magic-sparkles"></i> Smart AI Trip Planner</a>
+          <a href="#mapSection" class="drawer-link"><i class="fa-solid fa-map-location-dot"></i> Interactive Map</a>
+          <a href="#dashboard" class="drawer-link" id="drawerDashboardLink"><i class="fa-solid fa-id-card"></i> Traveler Dashboard</a>
+          <a href="#magazine" class="drawer-link"><i class="fa-solid fa-book-open"></i> Travel Magazine</a>
+          <a href="#deals" class="drawer-link"><i class="fa-solid fa-fire"></i> Curated Deals</a>
+        </nav>
+        <div class="drawer-actions">
+          <a href="#planner" class="btn btn-gold btn-block" id="drawerPlanBtn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Plan Your Journey
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main>
+
+    <!-- CINEMATIC HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-backdrop">
+        <div class="hero-overlay"></div>
+        <div class="hero-ambient-glow"></div>
+      </div>
+
+      <div class="hero-content container">
+        
+        <!-- Luxury Pre-title Tag -->
+        <div class="hero-badge animate-fade-up">
+          <span class="badge-star"><i class="fa-solid fa-sparkles"></i></span>
+          <span class="badge-text">DISCOVER &bull; PLAN &bull; BOOK &bull; EXPERIENCE</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="hero-title animate-fade-up delay-1">
+          Your Next <span class="text-gradient-gold">Extraordinary</span> Journey Starts Here.
+        </h1>
+
+        <!-- Supporting Editorial Text -->
+        <p class="hero-subtitle animate-fade-up delay-2">
+          Discover remarkable destinations, ultra-luxury sanctuaries, private aviation, and seamlessly curated itineraries engineered for the world's most discerning travelers.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-cta-group animate-fade-up delay-3">
+          <a href="#destinations" class="btn btn-gold btn-large btn-lift">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore Destinations</span>
+          </a>
+          <a href="#planner" class="btn btn-glass btn-large btn-lift">
+            <i class="fa-solid fa-route"></i>
+            <span>Plan My Trip</span>
+          </a>
+          <button class="btn btn-ghost-play" id="heroPlayVideoBtn" aria-label="Watch Experience Film">
+            <div class="play-icon-circle">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <span>Watch Experience</span>
+          </button>
+        </div>
+
+        <!-- Floating Live Location & VIP Indicator Cards -->
+        <div class="hero-floating-indicators">
+          
+          <div class="floating-card float-card-left" id="heroHavenCard">
+            <div class="float-card-img" style="background-image: url('https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=400&q=80');"></div>
+            <div class="float-card-info">
+              <span class="float-tag">CURATED HAVEN</span>
+              <strong class="float-title">The Chedi Andermatt</strong>
+              <div class="float-meta">
+                <span class="star-score"><i class="fa-solid fa-star"></i> 4.98</span>
+                <span class="float-loc"><i class="fa-solid fa-location-dot"></i> Swiss Alps</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card float-card-center">
+            <div class="stat-bubble">
+              <i class="fa-solid fa-shield-halved text-gold"></i>
+            </div>
+            <div class="float-card-info">
+              <strong class="float-metric">100% Bespoke & Insured</strong>
+              <span class="float-sub">24/7 Dedicated Concierge</span>
+            </div>
+          </div>
+
+          <div class="floating-card float-card-right">
+            <div class="avatar-stack">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Traveler" class="avatar-sm">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Traveler" class="avatar-sm">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Traveler" class="avatar-sm">
+              <span class="avatar-count">+250k</span>
+            </div>
+            <div class="float-card-info">
+              <strong class="float-metric">Discerning Travelers</strong>
+              <span class="float-sub">Worldwide Community</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Hero Bottom Scroll Indicator -->
+      <a href="#smartSearchSection" class="hero-scroll-down" aria-label="Scroll to Search">
+        <span>EXPLORE MORE</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- SMART TRAVEL SEARCH PANEL -->
+    <section class="search-panel-section" id="smartSearchSection">
+      <div class="search-panel-container container">
+        <div class="glass-search-card">
+          
+          <!-- Search Mode Tabs -->
+          <div class="search-tabs" role="tablist" aria-label="Travel search category tabs">
+            <button class="search-tab active" role="tab" aria-selected="true" data-tab="stays" id="tabStays">
+              <i class="fa-solid fa-hotel"></i>
+              <span>Stays</span>
+            </button>
+            <button class="search-tab" role="tab" aria-selected="false" data-tab="flights" id="tabFlights">
+              <i class="fa-solid fa-plane-departure"></i>
+              <span>Flights</span>
+            </button>
+            <button class="search-tab" role="tab" aria-selected="false" data-tab="tours" id="tabTours">
+              <i class="fa-solid fa-mountain-sun"></i>
+              <span>Tours & Safaris</span>
+            </button>
+            <button class="search-tab" role="tab" aria-selected="false" data-tab="activities" id="tabActivities">
+              <i class="fa-solid fa-sailboat"></i>
+              <span>Experiences</span>
+            </button>
+            <button class="search-tab" role="tab" aria-selected="false" data-tab="packages" id="tabPackages">
+              <i class="fa-solid fa-compass-drafting"></i>
+              <span>Curated Packages</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Tab Content Form -->
+          <form class="search-form-grid" id="mainSearchForm" onsubmit="event.preventDefault(); window.AuroraApp.handleMainSearch();">
+            
+            <!-- Where are you going? / Destination Input -->
+            <div class="form-group-field flex-grow-2">
+              <label for="searchDestinationInput"><i class="fa-solid fa-location-dot"></i> Destination</label>
+              <div class="field-input-wrapper">
+                <input type="text" id="searchDestinationInput" placeholder="Where is your heart yearning to go?" autocomplete="off" value="">
+                <button type="button" class="btn-clear-input" id="clearSearchDestBtn" aria-label="Clear destination">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+              </div>
+              <!-- Destination Auto-suggestions -->
+              <div class="suggestions-popover" id="destSuggestionsPopover">
+                <div class="suggestion-group-title">Trending Luxury Destinations</div>
+                <div class="suggestion-chips">
+                  <button type="button" class="sugg-chip" data-val="Dubai, UAE">Dubai</button>
+                  <button type="button" class="sugg-chip" data-val="Maldives">Maldives</button>
+                  <button type="button" class="sugg-chip" data-val="Swiss Alps">Swiss Alps</button>
+                  <button type="button" class="sugg-chip" data-val="Paris, France">Paris</button>
+                  <button type="button" class="sugg-chip" data-val="Kyoto, Japan">Kyoto</button>
+                  <button type="button" class="sugg-chip" data-val="Amalfi Coast">Amalfi Coast</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Date Selection Input -->
+            <div class="form-group-field" id="dateGroupField">
+              <label for="searchCheckinDate"><i class="fa-regular fa-calendar-days"></i> Dates</label>
+              <div class="date-range-row">
+                <input type="date" id="searchCheckinDate" aria-label="Check-in or Departure Date">
+                <span class="date-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                <input type="date" id="searchCheckoutDate" aria-label="Check-out or Return Date">
+              </div>
+            </div>
+
+            <!-- Guests & Rooms Input -->
+            <div class="form-group-field" id="guestsGroupField">
+              <label for="searchGuestsSelect"><i class="fa-solid fa-user-group"></i> Guests</label>
+              <select id="searchGuestsSelect">
+                <option value="1">1 Solo Traveler</option>
+                <option value="2" selected>2 Adults (Couple)</option>
+                <option value="3">3 Guests (Private Suite)</option>
+                <option value="4">4 Guests (Family / Friends)</option>
+                <option value="5+">5+ Guests (Full Private Villa)</option>
+              </select>
+            </div>
+
+            <!-- Travel Style Selector -->
+            <div class="form-group-field" id="styleGroupField">
+              <label for="searchStyleSelect"><i class="fa-solid fa-gem"></i> Travel Style</label>
+              <select id="searchStyleSelect">
+                <option value="all">All Styles</option>
+                <option value="Ultra-Luxury">Ultra-Luxury</option>
+                <option value="Adventure">Bespoke Adventure</option>
+                <option value="Romance">Romantic Escapes</option>
+                <option value="Wellness">Wellness & Spa</option>
+                <option value="Culture">Cultural Heritage</option>
+              </select>
+            </div>
+
+            <!-- Search Action Submit Button -->
+            <div class="form-group-action">
+              <button type="submit" class="btn btn-gold btn-search-submit" id="mainSearchSubmitBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATION DISCOVERY SECTION -->
+    <section class="section-padded destinations-section" id="destinations">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header-split">
+          <div>
+            <div class="eyebrow-tag"><i class="fa-solid fa-compass"></i> CURATED HORIZONS</div>
+            <h2 class="section-title">Where Will You Go Next?</h2>
+            <p class="section-subtitle">Handpicked luxury destinations across the globe, selected for unparalleled scenery, bespoke culture, and five-star hospitality.</p>
+          </div>
+          
+          <!-- Category Filter Pills -->
+          <div class="filter-chips-wrapper" id="destCategoryChips">
+            <button class="filter-chip active" data-category="all">All Havens</button>
+            <button class="filter-chip" data-category="luxury">Luxury & Glitz</button>
+            <button class="filter-chip" data-category="beach">Island & Coastal</button>
+            <button class="filter-chip" data-category="alpine">Alpine & Nature</button>
+            <button class="filter-chip" data-category="culture">Ancient Culture</button>
+            <button class="filter-chip" data-category="city">Iconic Metropolises</button>
+          </div>
+        </div>
+
+        <!-- Destination Explorer Controls: Search Filter & Sort -->
+        <div class="explorer-filter-bar">
+          <div class="search-filter-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="destFilterInput" placeholder="Filter by city, country or interest...">
+          </div>
+          <div class="filter-count-badge">
+            Showing <span id="destCountNumber">10</span> Extraordinary Havens
+          </div>
+          <div class="sort-box">
+            <label for="destSortSelect">Sort by:</label>
+            <select id="destSortSelect">
+              <option value="recommended">Curator's Pick</option>
+              <option value="popular">Most Popular</option>
+              <option value="price-asc">Starting Price: Low to High</option>
+              <option value="price-desc">Starting Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Destination Grid -->
+        <div class="destinations-grid" id="destinationsContainer">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LUXURY STAYS SECTION -->
+    <section class="section-padded stays-section" id="stays">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <div class="eyebrow-tag"><i class="fa-solid fa-hotel"></i> PRIVATE SANCTUARIES</div>
+            <h2 class="section-title">Stay Somewhere Extraordinary</h2>
+            <p class="section-subtitle">Overwater villas, private alpine chalets, cliffside palazzos, and world-renowned 5-star suites with private butler services.</p>
+          </div>
+          <a href="#stays" class="btn btn-glass btn-sm" id="viewAllStaysBtn">
+            <span>View All Stays</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Stays Controls: Filter Bar -->
+        <div class="stays-filter-panel glass-card">
+          <div class="stays-filters-row">
+            
+            <!-- Property Type -->
+            <div class="filter-control">
+              <label for="stayTypeFilter"><i class="fa-solid fa-building"></i> Property Type</label>
+              <select id="stayTypeFilter">
+                <option value="all">All Types</option>
+                <option value="Resort">Overwater & Island Resort</option>
+                <option value="Palace">Historic Royal Palace</option>
+                <option value="Chalet">Alpine Luxury Chalet</option>
+                <option value="Penthouse">Skyline Penthouse</option>
+                <option value="Boutique">Cliffside Boutique</option>
+              </select>
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="filter-control price-control">
+              <div class="price-labels">
+                <label for="stayPriceSlider"><i class="fa-solid fa-tag"></i> Max Nightly Rate</label>
+                <span class="price-val" id="stayPriceDisplay">$3,500</span>
+              </div>
+              <input type="range" id="stayPriceSlider" min="400" max="4500" step="100" value="4500">
+            </div>
+
+            <!-- Rating Filter -->
+            <div class="filter-control">
+              <label for="stayRatingFilter"><i class="fa-solid fa-star"></i> Minimum Rating</label>
+              <select id="stayRatingFilter">
+                <option value="all">Any Rating</option>
+                <option value="4.8">4.8+ Exceptional</option>
+                <option value="4.9">4.9+ World Class</option>
+              </select>
+            </div>
+
+            <!-- Amenities Checkboxes Dropdown / Row -->
+            <div class="filter-control amenities-control">
+              <span class="amenity-label"><i class="fa-solid fa-bell-concierge"></i> Amenities</span>
+              <div class="amenity-checkboxes">
+                <label class="amenity-check">
+                  <input type="checkbox" value="pool" id="amenityPool">
+                  <span>Infinity Pool</span>
+                </label>
+                <label class="amenity-check">
+                  <input type="checkbox" value="spa" id="amenitySpa">
+                  <span>Spa & Wellness</span>
+                </label>
+                <label class="amenity-check">
+                  <input type="checkbox" value="butler" id="amenityButler">
+                  <span>Private Butler</span>
+                </label>
+                <label class="amenity-check">
+                  <input type="checkbox" value="helipad" id="amenityHelipad">
+                  <span>Helipad</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Reset Filters -->
+            <div class="filter-control reset-control">
+              <button class="btn btn-ghost-sm" id="resetStayFiltersBtn" title="Reset Filters">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Stays Grid -->
+        <div class="stays-grid" id="staysContainer">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEAMLESS GLOBAL FLIGHTS SEARCH SECTION -->
+    <section class="section-padded flights-section" id="flights">
+      <div class="container">
+        
+        <div class="section-header-center">
+          <div class="eyebrow-tag"><i class="fa-solid fa-plane-up"></i> PRIVATE & COMMERCIAL AVIATION</div>
+          <h2 class="section-title">Seamless Global Transit</h2>
+          <p class="section-subtitle">Experience first-class suites, private charters, and priority connections with the world's most awarded airlines.</p>
+        </div>
+
+        <!-- Flight Search Box -->
+        <div class="flight-search-box glass-card">
+          
+          <!-- Flight Type Radios -->
+          <div class="flight-type-selector">
+            <label class="radio-label">
+              <input type="radio" name="flightType" value="roundtrip" checked>
+              <span class="radio-custom"></span>
+              <span>Round Trip</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="flightType" value="oneway">
+              <span class="radio-custom"></span>
+              <span>One Way</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="flightType" value="charter">
+              <span class="radio-custom"></span>
+              <span>Private Jet Charter</span>
+            </label>
+          </div>
+
+          <!-- Flight Fields Form -->
+          <form class="flight-form" id="flightSearchForm" onsubmit="event.preventDefault(); window.AuroraApp.handleFlightFilter();">
+            <div class="flight-inputs-grid">
+              
+              <!-- Origin Airport -->
+              <div class="flight-field">
+                <label for="flightOriginInput"><i class="fa-solid fa-plane-departure"></i> Origin</label>
+                <input type="text" id="flightOriginInput" value="New York (JFK)" placeholder="City or Airport code">
+              </div>
+
+              <!-- Swap Button -->
+              <button type="button" class="btn-swap-airports" id="swapAirportsBtn" title="Swap route">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              </button>
+
+              <!-- Destination Airport -->
+              <div class="flight-field">
+                <label for="flightDestInput"><i class="fa-solid fa-plane-arrival"></i> Destination</label>
+                <input type="text" id="flightDestInput" value="Dubai (DXB)" placeholder="City or Airport code">
+              </div>
+
+              <!-- Departure Date -->
+              <div class="flight-field">
+                <label for="flightDepartDate"><i class="fa-regular fa-calendar"></i> Departure</label>
+                <input type="date" id="flightDepartDate">
+              </div>
+
+              <!-- Return Date -->
+              <div class="flight-field" id="flightReturnField">
+                <label for="flightReturnDate"><i class="fa-regular fa-calendar"></i> Return</label>
+                <input type="date" id="flightReturnDate">
+              </div>
+
+              <!-- Cabin Class -->
+              <div class="flight-field">
+                <label for="flightCabinSelect"><i class="fa-solid fa-couch"></i> Cabin Class</label>
+                <select id="flightCabinSelect">
+                  <option value="first">First Class Suite</option>
+                  <option value="business" selected>Business Class</option>
+                  <option value="premium">Premium Economy</option>
+                  <option value="economy">Economy Elite</option>
+                </select>
+              </div>
+
+              <!-- Submit -->
+              <div class="flight-field flight-submit-field">
+                <button type="submit" class="btn btn-gold btn-block" id="flightSubmitBtn">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <span>Find Flights</span>
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+          <!-- Sorting & Status Bar -->
+          <div class="flight-results-bar">
+            <span class="flight-results-count" id="flightResultCount">Showing 6 Premier Routes</span>
+            <div class="flight-sort-buttons">
+              <button class="sort-pill active" data-flightsort="cheapest">Best Value</button>
+              <button class="sort-pill" data-flightsort="fastest">Fastest (Non-Stop)</button>
+              <button class="sort-pill" data-flightsort="luxury">First Class Suites</button>
+            </div>
+          </div>
+
+          <!-- Flight Results List -->
+          <div class="flight-cards-list" id="flightCardsContainer">
+            <!-- Dynamically populated via app.js -->
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BESPOKE EXPERIENCES SECTION -->
+    <section class="section-padded experiences-section" id="experiences">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <div class="eyebrow-tag"><i class="fa-solid fa-sailboat"></i> EXTRAORDINARY MOMENTS</div>
+            <h2 class="section-title">Experiences Worth Traveling For</h2>
+            <p class="section-subtitle">Private access to world treasures, hot air balloon flights, Michelin chef table tastings, and underwater safaris.</p>
+          </div>
+          
+          <!-- Experience Category Pills -->
+          <div class="exp-category-pills" id="expCategoryFilter">
+            <button class="pill-btn active" data-expcat="all">All Experiences</button>
+            <button class="pill-btn" data-expcat="adventure">Adventure</button>
+            <button class="pill-btn" data-expcat="luxury">VIP & Yachting</button>
+            <button class="pill-btn" data-expcat="culinary">Gastronomy</button>
+            <button class="pill-btn" data-expcat="culture">Cultural Heritage</button>
+          </div>
+        </div>
+
+        <div class="experiences-grid" id="experiencesContainer">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SIGNATURE TRAVEL PACKAGES SECTION -->
+    <section class="section-padded packages-section" id="packages">
+      <div class="container">
+        
+        <div class="section-header-center">
+          <div class="eyebrow-tag"><i class="fa-solid fa-gem"></i> ALL-INCLUSIVE ITINERARIES</div>
+          <h2 class="section-title">Signature Travel Packages</h2>
+          <p class="section-subtitle">Flawlessly choreographed journeys encompassing private flights, 5-star accommodations, personal guides, and Michelin dining.</p>
+        </div>
+
+        <div class="packages-grid" id="packagesContainer">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SMART 5-STEP AI TRIP PLANNER (FLAGSHIP FEATURE) -->
+    <section class="section-padded planner-section" id="planner">
+      <div class="container">
+        
+        <div class="planner-box glass-card-elevated">
+          
+          <!-- Planner Header -->
+          <div class="planner-header">
+            <div class="planner-badge">
+              <i class="fa-solid fa-wand-magic-sparkles text-gold"></i>
+              <span>AI-POWERED BESPOKE ITINERARY ENGINE</span>
+            </div>
+            <h2 class="planner-title">Build Your Perfect Journey</h2>
+            <p class="planner-desc">Tell our intelligent travel algorithm your desires, style, and pace. We will craft an exquisite, personalized day-by-day itinerary in seconds.</p>
+          </div>
+
+          <!-- 5-Step Progress Indicator -->
+          <div class="planner-progress-bar-wrapper">
+            <div class="step-nodes">
+              <div class="step-node active" data-step="1" id="stepNode1">
+                <span class="step-num">1</span>
+                <span class="step-label">Destination</span>
+              </div>
+              <div class="step-line" id="stepLine1"></div>
+              <div class="step-node" data-step="2" id="stepNode2">
+                <span class="step-num">2</span>
+                <span class="step-label">Dates & Days</span>
+              </div>
+              <div class="step-line" id="stepLine2"></div>
+              <div class="step-node" data-step="3" id="stepNode3">
+                <span class="step-num">3</span>
+                <span class="step-label">Travel Style</span>
+              </div>
+              <div class="step-line" id="stepLine3"></div>
+              <div class="step-node" data-step="4" id="stepNode4">
+                <span class="step-num">4</span>
+                <span class="step-label">Passions & Pace</span>
+              </div>
+              <div class="step-line" id="stepLine4"></div>
+              <div class="step-node" data-step="5" id="stepNode5">
+                <span class="step-num">5</span>
+                <span class="step-label">Your Itinerary</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wizard Step Panels -->
+          <div class="planner-wizard-body">
+            
+            <!-- STEP 1: Select Destination -->
+            <div class="wizard-step-panel active" id="wizardStep1">
+              <h3 class="step-heading">Step 1: Choose Your Dream Destination</h3>
+              <p class="step-subheading">Select a featured haven or enter any custom city across the globe.</p>
+              
+              <div class="planner-dest-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="plannerDestInput" placeholder="Enter city or country (e.g. Dubai, Switzerland, Tokyo)..." value="Dubai, UAE">
+              </div>
+
+              <div class="planner-dest-cards-grid" id="plannerDestPicks">
+                <!-- Selectable destination radio cards -->
+                <div class="planner-dest-chip selected" data-dest="Dubai, UAE" data-img="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=300&q=80">
+                  <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=300&q=80" alt="Dubai">
+                  <div class="chip-info">
+                    <strong>Dubai</strong>
+                    <span>UAE</span>
+                  </div>
+                </div>
+
+                <div class="planner-dest-chip" data-dest="Swiss Alps, Switzerland" data-img="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=300&q=80">
+                  <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=300&q=80" alt="Switzerland">
+                  <div class="chip-info">
+                    <strong>Swiss Alps</strong>
+                    <span>Switzerland</span>
+                  </div>
+                </div>
+
+                <div class="planner-dest-chip" data-dest="Maldives" data-img="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=300&q=80">
+                  <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=300&q=80" alt="Maldives">
+                  <div class="chip-info">
+                    <strong>Maldives</strong>
+                    <span>Private Atolls</span>
+                  </div>
+                </div>
+
+                <div class="planner-dest-chip" data-dest="Paris, France" data-img="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=300&q=80">
+                  <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=300&q=80" alt="Paris">
+                  <div class="chip-info">
+                    <strong>Paris</strong>
+                    <span>France</span>
+                  </div>
+                </div>
+
+                <div class="planner-dest-chip" data-dest="Kyoto & Tokyo, Japan" data-img="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=300&q=80">
+                  <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=300&q=80" alt="Japan">
+                  <div class="chip-info">
+                    <strong>Kyoto & Tokyo</strong>
+                    <span>Japan</span>
+                  </div>
+                </div>
+
+                <div class="planner-dest-chip" data-dest="Amalfi Coast, Italy" data-img="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=300&q=80">
+                  <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=300&q=80" alt="Amalfi Coast">
+                  <div class="chip-info">
+                    <strong>Amalfi Coast</strong>
+                    <span>Italy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2: Dates & Duration -->
+            <div class="wizard-step-panel" id="wizardStep2">
+              <h3 class="step-heading">Step 2: Dates & Travel Duration</h3>
+              <p class="step-subheading">Select your ideal timeline. Our engine dynamically crafts activities for every single day.</p>
+              
+              <div class="planner-duration-row">
+                <div class="field-box">
+                  <label for="plannerStartDate"><i class="fa-regular fa-calendar-days"></i> Estimated Start Date</label>
+                  <input type="date" id="plannerStartDate">
+                </div>
+
+                <div class="field-box">
+                  <div class="slider-header-flex">
+                    <label for="plannerDaysSlider"><i class="fa-solid fa-clock"></i> Journey Duration</label>
+                    <span class="slider-val text-gold" id="plannerDaysVal">5 Days</span>
+                  </div>
+                  <input type="range" id="plannerDaysSlider" min="3" max="10" value="5" step="1">
+                  <div class="slider-ticks">
+                    <span>3 Days (Quick Haven)</span>
+                    <span>5 Days (Classic)</span>
+                    <span>7 Days (Immersive)</span>
+                    <span>10 Days (Grand Odyssey)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3: Travel Style -->
+            <div class="wizard-step-panel" id="wizardStep3">
+              <h3 class="step-heading">Step 3: What is Your Travel Style?</h3>
+              <p class="step-subheading">How do you envision this journey unfolding?</p>
+              
+              <div class="style-cards-grid">
+                <div class="style-choice-card selected" data-style="Ultra-Luxury & White-Glove">
+                  <div class="style-icon"><i class="fa-solid fa-crown"></i></div>
+                  <h4>Ultra-Luxury</h4>
+                  <p>Five-star palace hotels, private chauffeur, VIP front-row access, and elite comfort.</p>
+                </div>
+                <div class="style-choice-card" data-style="Bespoke Thrill & Adventure">
+                  <div class="style-icon"><i class="fa-solid fa-compass"></i></div>
+                  <h4>Bespoke Adventure</h4>
+                  <p>Helicopter touring, alpine climbs, safari excursions, and private ocean yachting.</p>
+                </div>
+                <div class="style-choice-card" data-style="Romance & Intimacy">
+                  <div class="style-icon"><i class="fa-solid fa-heart"></i></div>
+                  <h4>Romantic Haven</h4>
+                  <p>Sunset champagne cruises, secluded dinners under the stars, and couple spa pavilions.</p>
+                </div>
+                <div class="style-choice-card" data-style="Cultural Immersion & Arts">
+                  <div class="style-icon"><i class="fa-solid fa-landmark"></i></div>
+                  <h4>Cultural Immersion</h4>
+                  <p>Private museum curators, historical explorations, and architectural mastery.</p>
+                </div>
+                <div class="style-choice-card" data-style="Rejuvenation & Wellness">
+                  <div class="style-icon"><i class="fa-solid fa-spa"></i></div>
+                  <h4>Wellness Sanctuary</h4>
+                  <p>Holistic retreats, thermal springs, daily mindfulness, and clean organic gastronomy.</p>
+                </div>
+                <div class="style-choice-card" data-style="Culinary & Wine Odyssey">
+                  <div class="style-icon"><i class="fa-solid fa-wine-glass"></i></div>
+                  <h4>Culinary Odyssey</h4>
+                  <p>Michelin-starred tasting menus, sommelier masterclasses, and secret local bites.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 4: Passions & Pace -->
+            <div class="wizard-step-panel" id="wizardStep4">
+              <h3 class="step-heading">Step 4: Your Passions & Daily Pace</h3>
+              <p class="step-subheading">Select all specific interests to incorporate into each day's itinerary.</p>
+              
+              <div class="interests-tags-grid" id="plannerInterestsTags">
+                <label class="tag-checkbox-pill selected">
+                  <input type="checkbox" value="Fine Dining" checked>
+                  <span><i class="fa-solid fa-utensils"></i> Fine Dining</span>
+                </label>
+                <label class="tag-checkbox-pill selected">
+                  <input type="checkbox" value="Iconic Architecture" checked>
+                  <span><i class="fa-solid fa-archway"></i> Iconic Architecture</span>
+                </label>
+                <label class="tag-checkbox-pill selected">
+                  <input type="checkbox" value="Scenic Views & Photography" checked>
+                  <span><i class="fa-solid fa-camera"></i> Scenic Views</span>
+                </label>
+                <label class="tag-checkbox-pill">
+                  <input type="checkbox" value="Private Boat & Yachting">
+                  <span><i class="fa-solid fa-ship"></i> Private Yachting</span>
+                </label>
+                <label class="tag-checkbox-pill">
+                  <input type="checkbox" value="High Fashion & Shopping">
+                  <span><i class="fa-solid fa-bag-shopping"></i> Luxury Shopping</span>
+                </label>
+                <label class="tag-checkbox-pill">
+                  <input type="checkbox" value="Historic Landmarks">
+                  <span><i class="fa-solid fa-monument"></i> Historic Landmarks</span>
+                </label>
+                <label class="tag-checkbox-pill">
+                  <input type="checkbox" value="Nightlife & VIP Lounges">
+                  <span><i class="fa-solid fa-martini-glass-citrus"></i> Rooftop Lounges</span>
+                </label>
+                <label class="tag-checkbox-pill">
+                  <input type="checkbox" value="Spa & Relaxation">
+                  <span><i class="fa-solid fa-hot-tub-person"></i> Spa & Steam</span>
+                </label>
+              </div>
+
+              <div class="pace-selector-wrapper">
+                <label><i class="fa-solid fa-gauge-high"></i> Travel Pace:</label>
+                <div class="pace-radio-group">
+                  <label class="pace-pill">
+                    <input type="radio" name="travelPace" value="relaxed">
+                    <span>Relaxed & Unhurried (2-3 items/day)</span>
+                  </label>
+                  <label class="pace-pill active">
+                    <input type="radio" name="travelPace" value="balanced" checked>
+                    <span>Balanced & Curated (3-4 items/day)</span>
+                  </label>
+                  <label class="pace-pill">
+                    <input type="radio" name="travelPace" value="active">
+                    <span>High Energy & Packed (5+ items/day)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 5: Generated Intelligent Itinerary -->
+            <div class="wizard-step-panel" id="wizardStep5">
+              
+              <div class="generated-itinerary-header">
+                <div>
+                  <span class="badge-gold-outline"><i class="fa-solid fa-circle-check"></i> Bespoke Itinerary Ready</span>
+                  <h3 class="itinerary-generated-title" id="itineraryDisplayTitle">5-Day Ultra-Luxury Odyssey: Dubai, UAE</h3>
+                  <div class="itinerary-meta-chips" id="itineraryMetaChips">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+                
+                <!-- Itinerary Actions Toolbar -->
+                <div class="itinerary-toolbar">
+                  <button class="btn btn-glass-sm" id="itineraryAddActivityBtn" title="Add a custom activity">
+                    <i class="fa-solid fa-plus"></i> Add Activity
+                  </button>
+                  <button class="btn btn-glass-sm" id="itinerarySaveBtn" title="Save to your traveler profile">
+                    <i class="fa-solid fa-bookmark"></i> Save Itinerary
+                  </button>
+                  <button class="btn btn-glass-sm" id="itineraryCalendarBtn" title="Download .ics Calendar Sync">
+                    <i class="fa-solid fa-calendar-plus"></i> Add to Calendar
+                  </button>
+                  <button class="btn btn-glass-sm" id="itineraryPrintBtn" title="Print or save as PDF">
+                    <i class="fa-solid fa-print"></i> Print / PDF
+                  </button>
+                  <button class="btn btn-gold-sm" id="itineraryBookNowBtn">
+                    <i class="fa-solid fa-credit-card"></i> Book Complete Trip
+                  </button>
+                </div>
+              </div>
+
+              <!-- Interactive Visual Timeline -->
+              <div class="itinerary-timeline-container" id="itineraryDaysTimeline">
+                <!-- Dynamically rendered day cards with editable activities via app.js -->
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Wizard Navigation Footer -->
+          <div class="planner-wizard-footer">
+            <button class="btn btn-ghost" id="wizardPrevBtn" style="display: none;">
+              <i class="fa-solid fa-arrow-left"></i> Previous Step
+            </button>
+            <div class="wizard-footer-right">
+              <span class="step-status-text" id="wizardStatusText">Step 1 of 4: Destination</span>
+              <button class="btn btn-gold btn-large" id="wizardNextBtn">
+                <span>Continue to Dates</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE MAP SECTION -->
+    <section class="section-padded map-section" id="mapSection">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <div class="eyebrow-tag"><i class="fa-solid fa-map-location-dot"></i> EXPLORE THE GLOBE</div>
+            <h2 class="section-title">Interactive Destination Map</h2>
+            <p class="section-subtitle">Navigate through our verified network of 5-star sanctuaries, Michelin dining hotspots, private heliports, and historic marvels.</p>
+          </div>
+
+          <!-- Map Filter Layers -->
+          <div class="map-layer-filters" id="mapFilterLayers">
+            <button class="map-filter-btn active" data-pin="all">All Hotspots</button>
+            <button class="map-filter-btn" data-pin="stay"><i class="fa-solid fa-hotel"></i> Luxury Stays</button>
+            <button class="map-filter-btn" data-pin="landmark"><i class="fa-solid fa-monument"></i> Landmarks</button>
+            <button class="map-filter-btn" data-pin="dining"><i class="fa-solid fa-utensils"></i> Michelin Dining</button>
+            <button class="map-filter-btn" data-pin="aviation"><i class="fa-solid fa-plane"></i> VIP Aviation</button>
+          </div>
+        </div>
+
+        <!-- Interactive Map Container -->
+        <div class="interactive-map-canvas glass-card" id="interactiveMapContainer">
+          <!-- Canvas / SVG Map visualization with interactive glowing pins -->
+          <div class="map-svg-wrapper">
+            <svg class="world-svg-bg" viewBox="0 0 1000 500" preserveAspectRatio="none">
+              <!-- Stylized World Map Silhouette -->
+              <defs>
+                <linearGradient id="mapGlowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.15" />
+                  <stop offset="50%" stop-color="#1e3a8a" stop-opacity="0.25" />
+                  <stop offset="100%" stop-color="#d4af37" stop-opacity="0.12" />
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#mapGlowGrad)"/>
+              
+              <!-- Subtle Grid lines -->
+              <line x1="0" y1="125" x2="1000" y2="125" stroke="rgba(255,255,255,0.04)" stroke-dasharray="4"/>
+              <line x1="0" y1="250" x2="1000" y2="250" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4"/>
+              <line x1="0" y1="375" x2="1000" y2="375" stroke="rgba(255,255,255,0.04)" stroke-dasharray="4"/>
+              <line x1="250" y1="0" x2="250" y2="500" stroke="rgba(255,255,255,0.04)" stroke-dasharray="4"/>
+              <line x1="500" y1="0" x2="500" y2="500" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4"/>
+              <line x1="750" y1="0" x2="750" y2="500" stroke="rgba(255,255,255,0.04)" stroke-dasharray="4"/>
+
+              <!-- Stylized continental contours -->
+              <path d="M150,120 Q200,90 280,110 T320,180 T260,260 T160,230 Z" fill="rgba(255,255,255,0.05)" />
+              <path d="M220,290 Q270,300 280,380 T230,460 T190,380 Z" fill="rgba(255,255,255,0.05)" />
+              <path d="M470,110 Q540,90 580,140 T540,220 T460,190 Z" fill="rgba(255,255,255,0.05)" />
+              <path d="M480,230 Q560,220 590,320 T540,430 T470,360 Z" fill="rgba(255,255,255,0.05)" />
+              <path d="M600,100 Q780,80 880,160 T820,300 T660,260 Z" fill="rgba(255,255,255,0.05)" />
+              <path d="M740,340 Q840,330 860,420 T760,450 Z" fill="rgba(255,255,255,0.05)" />
+            </svg>
+          </div>
+
+          <!-- Interactive Pins (Clickable) -->
+          <div class="map-pins-layer" id="mapPinsLayer">
+            <!-- Dynamically populated via app.js -->
+          </div>
+
+          <!-- Floating Pin Detail Card Preview -->
+          <div class="map-popup-card" id="mapPopupCard" style="display: none;">
+            <button class="popup-close-btn" id="closeMapPopupBtn"><i class="fa-solid fa-xmark"></i></button>
+            <img src="" alt="Hotspot Preview" id="mapPopupImg" class="popup-img">
+            <div class="popup-content">
+              <span class="popup-badge" id="mapPopupBadge">Luxury Stay</span>
+              <h4 class="popup-title" id="mapPopupTitle">Burj Al Arab Jumeirah</h4>
+              <p class="popup-desc" id="mapPopupDesc">Iconic sail-shaped architectural wonder offering private butler suites.</p>
+              <div class="popup-bottom">
+                <span class="popup-price" id="mapPopupPrice">From $2,200/night</span>
+                <button class="btn btn-gold-sm" id="mapPopupActionBtn">Explore Spot</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Instructions Overlay -->
+          <div class="map-instructions-pill">
+            <i class="fa-solid fa-hand-pointer"></i> Click any glowing pin to inspect coordinates & private amenities
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRAVEL MAGAZINE & EDITORIAL GUIDES -->
+    <section class="section-padded magazine-section" id="magazine">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <div class="eyebrow-tag"><i class="fa-solid fa-book-open"></i> EDITORIAL JOURNAL</div>
+            <h2 class="section-title">The Aurora Travel Magazine</h2>
+            <p class="section-subtitle">Insider perspectives, haute gastronomy guides, hidden architectural marvels, and slow-travel essays.</p>
+          </div>
+          <div class="mag-categories" id="magCategoryPills">
+            <button class="pill-btn active" data-mag="all">All Articles</button>
+            <button class="pill-btn" data-mag="destinations">Destinations</button>
+            <button class="pill-btn" data-mag="gastronomy">Gastronomy</button>
+            <button class="pill-btn" data-mag="lifestyle">Luxury Lifestyle</button>
+          </div>
+        </div>
+
+        <div class="magazine-layout">
+          
+          <!-- Large Featured Editorial Story -->
+          <article class="featured-story glass-card" id="featuredArticleCard">
+            <div class="featured-story-img-wrap">
+              <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=1000&q=80" alt="Glacier Express" class="featured-img">
+              <span class="featured-label"><i class="fa-solid fa-crown"></i> COVER STORY</span>
+            </div>
+            <div class="featured-story-content">
+              <div class="article-meta">
+                <span class="article-cat">Alpine Grandeur</span>
+                <span class="meta-dot">&bull;</span>
+                <span class="article-read-time"><i class="fa-regular fa-clock"></i> 7 min read</span>
+                <span class="meta-dot">&bull;</span>
+                <span class="article-date">September 2026</span>
+              </div>
+              <h3 class="featured-story-title">The Renaissance of Slow Travel: Private Panoramic Rail Across the Swiss Alps</h3>
+              <p class="featured-story-excerpt">
+                Why the world's most affluent travelers are relinquishing private jets for bespoke, wood-paneled observation cars winding past emerald gorges, glacier-fed waterfalls, and snow-dusted summits.
+              </p>
+              <div class="featured-story-author">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">
+                <div class="author-details">
+                  <strong>Elena Von Habsburg</strong>
+                  <span>Senior European Editor & Aristocratic Heritage Fellow</span>
+                </div>
+              </div>
+              <button class="btn btn-gold btn-sm btn-read-article" data-article-id="art-1">Read Full Story</button>
+            </div>
+          </article>
+
+          <!-- Editorial Grid of Articles -->
+          <div class="magazine-grid" id="magazineArticlesGrid">
+            <!-- Populated via app.js -->
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXCLUSIVE LIMITED-TIME DEALS -->
+    <section class="section-padded deals-section" id="deals">
+      <div class="container">
+        
+        <div class="deals-banner glass-card-elevated">
+          <div class="deals-banner-content">
+            <div class="deals-badge"><i class="fa-solid fa-fire text-gold"></i> LIMITED PRIVILEGE OFFERS</div>
+            <h2 class="deals-headline">Exceptional Journeys. Unrepeatable Privileges.</h2>
+            <p class="deals-sub">Book selected autumn & winter retreats by this weekend and receive complimentary private helicopter transfers, $1,000 resort culinary credits, or yacht day charters.</p>
+            
+            <!-- Live Countdown Timer -->
+            <div class="deals-countdown" id="dealsCountdown">
+              <div class="countdown-unit">
+                <span class="countdown-num" id="countdownHours">38</span>
+                <span class="countdown-lbl">Hours</span>
+              </div>
+              <span class="countdown-sep">:</span>
+              <div class="countdown-unit">
+                <span class="countdown-num" id="countdownMins">44</span>
+                <span class="countdown-lbl">Minutes</span>
+              </div>
+              <span class="countdown-sep">:</span>
+              <div class="countdown-unit">
+                <span class="countdown-num" id="countdownSecs">19</span>
+                <span class="countdown-lbl">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="deals-grid" id="dealsGridContainer">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRAVELER COMMUNITY & STORIES -->
+    <section class="section-padded community-section" id="community">
+      <div class="container">
+        
+        <div class="section-header-split">
+          <div>
+            <div class="eyebrow-tag"><i class="fa-solid fa-users"></i> VOYAGER DISPATCHES</div>
+            <h2 class="section-title">Stories From Our Traveler Community</h2>
+            <p class="section-subtitle">Real experiences and photography documented by Aurora travelers discovering the farthest corners of our world.</p>
+          </div>
+          <button class="btn btn-gold btn-sm" id="openShareStoryBtn">
+            <i class="fa-solid fa-pen-nib"></i> Share Your Journey
+          </button>
+        </div>
+
+        <div class="community-grid" id="communityStoriesGrid">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REVIEWS & ACCREDITATIONS -->
+    <section class="section-padded reviews-section" id="reviews">
+      <div class="container">
+        
+        <!-- Live Numbers Counter Bar -->
+        <div class="metrics-counter-bar glass-card">
+          <div class="metric-item">
+            <span class="metric-value text-gradient-gold" data-counter="250000">250K+</span>
+            <span class="metric-name">Discerning Travelers</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value text-gradient-gold" data-counter="120">120+</span>
+            <span class="metric-name">Curated Luxury Havens</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value text-gradient-gold" data-counter="35000">35K+</span>
+            <span class="metric-name">VIP Experiences Executed</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value text-gradient-gold" data-counter="4.98">4.98/5</span>
+            <span class="metric-name">Average Guest Rating</span>
+          </div>
+        </div>
+
+        <div class="section-header-center mt-5">
+          <div class="eyebrow-tag"><i class="fa-solid fa-star"></i> TRAVELER TESTIMONIALS</div>
+          <h2 class="section-title">Loved by High-Net-Worth Travelers Worldwide</h2>
+          <p class="section-subtitle">Read firsthand thoughts from executives, couples, and adventurers who trust Aurora Travel with their most precious resource: time.</p>
+        </div>
+
+        <div class="reviews-grid" id="reviewsCardsGrid">
+          <!-- Populated via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- USER DASHBOARD SECTION (High-End Traveler Portal) -->
+    <section class="section-padded dashboard-section" id="dashboard">
+      <div class="container">
+        
+        <div class="dashboard-wrapper glass-card-elevated">
+          
+          <!-- Dashboard Sidebar Navigation -->
+          <aside class="dashboard-sidebar">
+            <div class="dash-user-card">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Traveler Avatar" class="dash-avatar" id="dashUserAvatar">
+              <div class="dash-user-meta">
+                <strong class="dash-username" id="dashUsernameDisplay">Alexander Wright</strong>
+                <span class="dash-badge"><i class="fa-solid fa-crown text-gold"></i> Black Diamond Tier</span>
+              </div>
+            </div>
+
+            <nav class="dash-nav">
+              <button class="dash-nav-btn active" data-dashtab="overview">
+                <i class="fa-solid fa-gauge"></i> Overview
+              </button>
+              <button class="dash-nav-btn" data-dashtab="my-trips">
+                <i class="fa-solid fa-route"></i> My Trips & Itineraries
+              </button>
+              <button class="dash-nav-btn" data-dashtab="bookings">
+                <i class="fa-solid fa-ticket"></i> Active Bookings (<span id="dashBookingCountBadge">2</span>)
+              </button>
+              <button class="dash-nav-btn" data-dashtab="favorites">
+                <i class="fa-solid fa-heart"></i> Saved Wishlist (<span id="dashFavCountBadge">0</span>)
+              </button>
+              <button class="dash-nav-btn" data-dashtab="rewards">
+                <i class="fa-solid fa-coins"></i> Aurora Credits & Perks
+              </button>
+              <button class="dash-nav-btn" data-dashtab="settings">
+                <i class="fa-solid fa-gear"></i> Profile & Preferences
+              </button>
+            </nav>
+
+            <div class="dash-sidebar-bottom">
+              <button class="btn btn-ghost-sm text-muted" id="dashLogoutBtn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+              </button>
+            </div>
+          </aside>
+
+          <!-- Dashboard Main Panel -->
+          <div class="dashboard-content" id="dashboardContentPanel">
+            
+            <!-- OVERVIEW TAB -->
+            <div class="dash-tab-pane active" id="paneOverview">
+              
+              <div class="dash-pane-header">
+                <div>
+                  <h3 class="dash-title">Welcome Back, <span id="dashGreetingName">Alexander</span></h3>
+                  <p class="dash-subtitle">Your private concierge status is active. You have 1 upcoming voyage in 14 days.</p>
+                </div>
+                <button class="btn btn-gold-sm" onclick="location.href='#planner'">
+                  <i class="fa-solid fa-plus"></i> Plan Next Trip
+                </button>
+              </div>
+
+              <!-- Quick Metric Cards -->
+              <div class="dash-stats-row">
+                <div class="dash-stat-card">
+                  <div class="stat-icon-wrap"><i class="fa-solid fa-plane-departure"></i></div>
+                  <div class="stat-meta">
+                    <span class="stat-num" id="statTripsCount">4</span>
+                    <span class="stat-label">Completed Voyages</span>
+                  </div>
+                </div>
+                <div class="dash-stat-card">
+                  <div class="stat-icon-wrap"><i class="fa-solid fa-coins"></i></div>
+                  <div class="stat-meta">
+                    <span class="stat-num text-gold" id="statCreditsCount">$1,450</span>
+                    <span class="stat-label">Available Aurora Credits</span>
+                  </div>
+                </div>
+                <div class="dash-stat-card">
+                  <div class="stat-icon-wrap"><i class="fa-solid fa-heart"></i></div>
+                  <div class="stat-meta">
+                    <span class="stat-num" id="statSavedCount">0</span>
+                    <span class="stat-label">Saved Sanctuaries</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Upcoming Trip Spotlight Card -->
+              <div class="next-adventure-card" id="nextAdventureCard">
+                <div class="adv-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Dubai" class="adv-img" id="advImg">
+                  <span class="adv-countdown-badge"><i class="fa-solid fa-clock"></i> Departs in 14 Days</span>
+                </div>
+                <div class="adv-info">
+                  <div class="adv-tag">UPCOMING SIGNATURE JOURNEY</div>
+                  <h4 class="adv-title" id="advTitle">Dubai Imperial Splendor & Desert Haven</h4>
+                  <p class="adv-desc">Burj Al Arab Jumeirah Ocean Suite &bull; Private Helicopter Transfers &bull; 5 Nights</p>
+                  <div class="adv-pnr-row">
+                    <span class="pnr-label">Booking Reference:</span>
+                    <strong class="pnr-code" id="advPnrCode">AUR-9821-DXB</strong>
+                  </div>
+                  <div class="adv-action-row">
+                    <button class="btn btn-gold-sm" id="viewBoardingPassBtn">
+                      <i class="fa-solid fa-ticket"></i> View Pass & Details
+                    </button>
+                    <button class="btn btn-glass-sm" id="manageUpcomingTripBtn">
+                      <i class="fa-solid fa-sliders"></i> Manage Booking
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- MY TRIPS & ITINERARIES TAB -->
+            <div class="dash-tab-pane" id="paneMyTrips">
+              <div class="dash-pane-header">
+                <div>
+                  <h3 class="dash-title">My Custom Itineraries</h3>
+                  <p class="dash-subtitle">All your AI-generated and saved trip timelines.</p>
+                </div>
+                <a href="#planner" class="btn btn-gold-sm"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate New</a>
+              </div>
+              <div class="saved-itineraries-list" id="savedItinerariesContainer">
+                <!-- Dynamically populated via app.js -->
+              </div>
+            </div>
+
+            <!-- BOOKINGS TAB -->
+            <div class="dash-tab-pane" id="paneBookings">
+              <div class="dash-pane-header">
+                <div>
+                  <h3 class="dash-title">Booking Management</h3>
+                  <p class="dash-subtitle">Manage upcoming, completed, and cancelled hotel stays, flights, and packages.</p>
+                </div>
+                <div class="booking-status-filters">
+                  <button class="filter-pill-sm active" data-bfilter="all">All</button>
+                  <button class="filter-pill-sm" data-bfilter="upcoming">Upcoming</button>
+                  <button class="filter-pill-sm" data-bfilter="completed">Completed</button>
+                </div>
+              </div>
+              <div class="bookings-cards-list" id="dashBookingsList">
+                <!-- Populated via app.js -->
+              </div>
+            </div>
+
+            <!-- FAVORITES TAB -->
+            <div class="dash-tab-pane" id="paneFavorites">
+              <div class="dash-pane-header">
+                <div>
+                  <h3 class="dash-title">Saved Wishlist</h3>
+                  <p class="dash-subtitle">Your bookmarked destinations, luxury stays, flights, and experiences.</p>
+                </div>
+                <button class="btn btn-ghost-sm" id="clearAllFavsBtn">
+                  <i class="fa-solid fa-trash-can"></i> Clear All
+                </button>
+              </div>
+              <div class="favorites-grid-container" id="dashFavoritesContainer">
+                <!-- Populated via app.js -->
+              </div>
+            </div>
+
+            <!-- REWARDS & CREDITS TAB -->
+            <div class="dash-tab-pane" id="paneRewards">
+              <div class="dash-pane-header">
+                <div>
+                  <h3 class="dash-title">Aurora Private Travel Credits</h3>
+                  <p class="dash-subtitle">Enjoy privileged reward tiers, complimentary upgrades, and redemption perks.</p>
+                </div>
+              </div>
+              <div class="rewards-card glass-card">
+                <div class="rewards-balance-box">
+                  <span class="rew-label">CURRENT BALANCE</span>
+                  <h2 class="rew-amount text-gold">$1,450.00 USD</h2>
+                  <p class="rew-sub">Earn 5% credit back on every stay and private aviation booking.</p>
+                  <button class="btn btn-gold-sm" onclick="location.href='#stays'">Redeem Credits on Stays</button>
+                </div>
+                <div class="tier-perks-list">
+                  <h4>Your Black Diamond Tier Privileges:</h4>
+                  <ul>
+                    <li><i class="fa-solid fa-check text-gold"></i> Guaranteed 12:00 PM early check-in & 4:00 PM late checkout</li>
+                    <li><i class="fa-solid fa-check text-gold"></i> Complimentary room upgrade upon availability</li>
+                    <li><i class="fa-solid fa-check text-gold"></i> $100-$300 on-property spa & food credit at all Curated Havens</li>
+                    <li><i class="fa-solid fa-check text-gold"></i> Dedicated personal travel concierge reachable 24/7 via WhatsApp</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- SETTINGS TAB -->
+            <div class="dash-tab-pane" id="paneSettings">
+              <div class="dash-pane-header">
+                <div>
+                  <h3 class="dash-title">Profile & Travel Preferences</h3>
+                  <p class="dash-subtitle">Fine-tune your personal traveler persona, dietary needs, and seat preferences.</p>
+                </div>
+              </div>
+              <form class="settings-form-grid" id="profileSettingsForm" onsubmit="event.preventDefault(); window.AuroraApp.saveProfileSettings();">
+                <div class="form-group">
+                  <label for="setFullName">Full Name</label>
+                  <input type="text" id="setFullName" value="Alexander Wright">
+                </div>
+                <div class="form-group">
+                  <label for="setEmail">Email Address</label>
+                  <input type="email" id="setEmail" value="alexander.wright@elitevoyager.com">
+                </div>
+                <div class="form-group">
+                  <label for="setPhone">Phone / Mobile (with country code)</label>
+                  <input type="tel" id="setPhone" value="+1 (555) 382-9901">
+                </div>
+                <div class="form-group">
+                  <label for="setPassportCountry">Passport Country of Issue</label>
+                  <input type="text" id="setPassportCountry" value="United States">
+                </div>
+                <div class="form-group">
+                  <label for="setSeatPref">Preferred Aircraft Seat</label>
+                  <select id="setSeatPref">
+                    <option value="window" selected>Window Suite (Privacy)</option>
+                    <option value="aisle">Aisle Suite</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="setDietary">Dietary & Allergen Preferences</label>
+                  <input type="text" id="setDietary" value="Gluten-free, Champagne on arrival">
+                </div>
+                <div class="form-action full-width">
+                  <button type="submit" class="btn btn-gold btn-sm">Save Profile Changes</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="luxury-footer">
+    <div class="container">
+      
+      <!-- Top Newsletter Row -->
+      <div class="footer-newsletter-banner glass-card">
+        <div class="newsletter-info">
+          <span class="newsletter-tag"><i class="fa-solid fa-envelope-open-text"></i> THE AURORA DISPATCH</span>
+          <h3>Curated Luxury Travel, Delivered Monthly.</h3>
+          <p>Receive confidential invitations to secret hotel openings, private island charters, and editorial travel insights.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); window.AuroraApp.handleNewsletterSubscribe();">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmailInput" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-gold">
+              <span>Subscribe</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <span class="newsletter-disclaimer">Zero spam. Strict privacy. Unsubscribe at any moment.</span>
+        </form>
+      </div>
+
+      <!-- Main Footer Columns -->
+      <div class="footer-columns-grid">
+        
+        <!-- Brand Column -->
+        <div class="footer-col brand-col">
+          <div class="footer-brand">
+            <i class="fa-solid fa-compass-drafting text-gold"></i>
+            <span class="brand-name">AURORA TRAVEL</span>
+          </div>
+          <p class="brand-mission">
+            The world's foremost bespoke travel platform. Curating extraordinary luxury havens, private aviation, and tailor-made journeys with uncompromising refinement.
+          </p>
+          <div class="social-links">
+            <a href="#top" aria-label="Instagram" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#top" aria-label="LinkedIn" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#top" aria-label="Twitter / X" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#top" aria-label="YouTube" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 1: Explore -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-nav">
+            <li><a href="#destinations">Curated Destinations</a></li>
+            <li><a href="#stays">Private Sanctuaries & Stays</a></li>
+            <li><a href="#flights">First Class & Private Aviation</a></li>
+            <li><a href="#experiences">Bespoke Experiences</a></li>
+            <li><a href="#packages">Signature Packages</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Plan -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Plan</h4>
+          <ul class="footer-nav">
+            <li><a href="#planner">Smart AI Trip Planner</a></li>
+            <li><a href="#mapSection">Interactive World Map</a></li>
+            <li><a href="#magazine">The Travel Magazine</a></li>
+            <li><a href="#deals">Exclusive Privileges & Deals</a></li>
+            <li><a href="#community">Traveler Stories</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-nav">
+            <li><a href="#reviews">About Aurora Group</a></li>
+            <li><a href="#hero">Private Client Concierge</a></li>
+            <li><a href="#deals">Press & Media</a></li>
+            <li><a href="#reviews">Sustainability & Carbon Offset</a></li>
+            <li><a href="#reviews">Careers & Fellowships</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Concierge & Support -->
+        <div class="footer-col">
+          <h4 class="footer-heading">VIP Concierge</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-phone text-gold"></i> +1 (800) 892-AURORA</li>
+            <li><i class="fa-solid fa-envelope text-gold"></i> concierge@auroratravel.com</li>
+            <li><i class="fa-solid fa-location-dot text-gold"></i> Mayfair, London & Fifth Ave, New York</li>
+            <li class="support-status"><span class="status-dot-pulse"></span> 24/7 Global Dispatch Live</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">&copy; 2026 AURORA TRAVEL GROUP LTD. All rights reserved.</p>
+        <div class="bottom-legal-links">
+          <a href="#top">Privacy Policy</a>
+          <span class="sep">&bull;</span>
+          <a href="#top">Terms of Service</a>
+          <span class="sep">&bull;</span>
+          <a href="#top">Security & PNR Protection</a>
+          <span class="sep">&bull;</span>
+          <a href="#top">Cookie Preferences</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= MODALS & OVERLAYS ================= -->
+
+  <!-- DESTINATION DETAIL DEEP-DIVE MODAL -->
+  <div class="modal-backdrop" id="destModalBackdrop" aria-hidden="true">
+    <div class="modal-card modal-large" id="destDetailModal" role="dialog" aria-modal="true" aria-labelledby="destModalTitle">
+      <button class="modal-close-btn" id="closeDestModalBtn" aria-label="Close Destination Details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="dest-modal-hero" id="destModalHero">
+        <div class="dest-modal-hero-overlay"></div>
+        <div class="dest-modal-hero-content">
+          <span class="dest-modal-badge" id="destModalCountry">UNITED ARAB EMIRATES</span>
+          <h2 class="dest-modal-title" id="destModalTitle">Dubai</h2>
+          <p class="dest-modal-tagline" id="destModalTagline">Where ultramodern architectural marvels meet golden Arabian desert serenity.</p>
+        </div>
+      </div>
+      
+      <!-- Destination Modal Tabs -->
+      <div class="dest-modal-body">
+        <div class="dest-modal-tabs">
+          <button class="dest-tab active" data-dtab="overview">Overview & Best Season</button>
+          <button class="dest-tab" data-dtab="attractions">Iconic Sights</button>
+          <button class="dest-tab" data-dtab="stays">Curated Stays</button>
+          <button class="dest-tab" data-dtab="dining">Haute Gastronomy</button>
+          <button class="dest-tab" data-dtab="tips">Local Tips & Etiquette</button>
+        </div>
+
+        <div class="dest-tab-content active" id="dtabPaneOverview">
+          <div class="dest-overview-grid">
+            <div class="dest-desc-text" id="destModalDesc">
+              <!-- Populated dynamically -->
+            </div>
+            <div class="dest-stats-card glass-card">
+              <div class="dest-stat-row">
+                <span><i class="fa-solid fa-sun text-gold"></i> Best Season:</span>
+                <strong id="destModalSeason">November &ndash; April</strong>
+              </div>
+              <div class="dest-stat-row">
+                <span><i class="fa-solid fa-cloud-sun text-gold"></i> Avg Weather:</span>
+                <strong id="destModalWeather">26&deg;C / 78&deg;F (Sunny)</strong>
+              </div>
+              <div class="dest-stat-row">
+                <span><i class="fa-solid fa-coins text-gold"></i> Local Currency:</span>
+                <strong id="destModalCurr">AED (Dirham)</strong>
+              </div>
+              <div class="dest-stat-row">
+                <span><i class="fa-solid fa-language text-gold"></i> Primary Language:</span>
+                <strong id="destModalLang">Arabic &amp; English</strong>
+              </div>
+              <button class="btn btn-gold btn-block mt-3" id="destModalPlanTripBtn">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Plan Journey to This Haven
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dest-tab-content" id="dtabPaneAttractions">
+          <div class="dest-attractions-grid" id="destModalAttractionsList">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+
+        <div class="dest-tab-content" id="dtabPaneStays">
+          <div class="dest-stays-list" id="destModalStaysList">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+
+        <div class="dest-tab-content" id="dtabPaneDining">
+          <div class="dest-dining-grid" id="destModalDiningList">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+
+        <div class="dest-tab-content" id="dtabPaneTips">
+          <div class="dest-tips-box" id="destModalTipsBox">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- HOTEL / STAY DETAILS & ROOM SELECTION MODAL -->
+  <div class="modal-backdrop" id="stayModalBackdrop" aria-hidden="true">
+    <div class="modal-card modal-large" id="stayDetailModal" role="dialog" aria-modal="true" aria-labelledby="stayModalTitle">
+      <button class="modal-close-btn" id="closeStayModalBtn" aria-label="Close Stay Details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="stay-modal-grid">
+        
+        <!-- Left: Image Gallery & Description -->
+        <div class="stay-modal-left">
+          <div class="stay-gallery-main">
+            <img src="" alt="Stay Main Image" id="stayModalMainImg" class="stay-main-img">
+            <span class="stay-modal-rating-badge" id="stayModalRatingBadge"><i class="fa-solid fa-star"></i> 4.98</span>
+          </div>
+          <div class="stay-gallery-thumbs" id="stayModalThumbs">
+            <!-- Populated dynamically -->
+          </div>
+          <div class="stay-info-block">
+            <div class="stay-modal-loc" id="stayModalLoc"><i class="fa-solid fa-location-dot"></i> Jumeirah Beach, Dubai</div>
+            <h2 class="stay-modal-title" id="stayModalTitle">Burj Al Arab Jumeirah</h2>
+            <p class="stay-modal-desc" id="stayModalDesc">The peak of Arabian luxury...</p>
+            
+            <!-- Amenities Checklist -->
+            <h4 class="stay-section-subhead">Sanctuary Amenities</h4>
+            <div class="stay-amenities-tags" id="stayModalAmenitiesList">
+              <!-- Populated dynamically -->
+            </div>
+
+            <!-- Room Options Selection -->
+            <h4 class="stay-section-subhead mt-4">Select Suite or Villa</h4>
+            <div class="rooms-options-list" id="stayModalRoomsList">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Sticky Live Rate Calculator & Reservation Card -->
+        <div class="stay-modal-right">
+          <div class="sticky-booking-card glass-card">
+            <div class="calc-price-row">
+              <span class="calc-from-label">Nightly Rate</span>
+              <div class="calc-price-display">
+                <strong class="calc-rate-amount text-gold" id="calcRateDisplay">$2,200</strong>
+                <span class="calc-rate-period">/ night</span>
+              </div>
+            </div>
+
+            <div class="calc-dates-box">
+              <div class="calc-field">
+                <label for="stayModalCheckin">Check-in</label>
+                <input type="date" id="stayModalCheckin">
+              </div>
+              <div class="calc-field">
+                <label for="stayModalCheckout">Check-out</label>
+                <input type="date" id="stayModalCheckout">
+              </div>
+            </div>
+
+            <div class="calc-field mt-2">
+              <label for="stayModalGuests">Guests</label>
+              <select id="stayModalGuests">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests (Couple)</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+            </div>
+
+            <div class="calc-summary-table mt-3">
+              <div class="calc-row">
+                <span id="calcNightsMath">$2,200 &times; 3 nights</span>
+                <span id="calcSubtotalDisplay">$6,600</span>
+              </div>
+              <div class="calc-row">
+                <span>Luxury Service & VIP Taxes</span>
+                <span id="calcTaxesDisplay">$480</span>
+              </div>
+              <div class="calc-row">
+                <span>Aurora Black Diamond Privilege</span>
+                <span class="text-gold" id="calcDiscountDisplay">-$250</span>
+              </div>
+              <hr class="calc-hr">
+              <div class="calc-row calc-total-row">
+                <strong>Total Price</strong>
+                <strong class="calc-total-num text-gradient-gold" id="calcTotalDisplay">$6,830</strong>
+              </div>
+            </div>
+
+            <button class="btn btn-gold btn-block btn-large mt-4" id="stayReserveProceedBtn">
+              <i class="fa-solid fa-lock"></i> Reserve Your Stay
+            </button>
+            <p class="calc-guarantee-note"><i class="fa-solid fa-shield-check text-gold"></i> Free cancellation up to 48 hours prior to arrival.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MULTI-STEP CHECKOUT MODAL -->
+  <div class="modal-backdrop" id="checkoutModalBackdrop" aria-hidden="true">
+    <div class="modal-card modal-large" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+      <button class="modal-close-btn" id="closeCheckoutModalBtn" aria-label="Close Checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <!-- Multi-step Indicator -->
+      <div class="checkout-steps-bar">
+        <div class="c-step active" id="cStep1"><span class="c-num">1</span> Selection</div>
+        <div class="c-step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="c-step" id="cStep2"><span class="c-num">2</span> Traveler Details</div>
+        <div class="c-step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="c-step" id="cStep3"><span class="c-num">3</span> Payment & Review</div>
+        <div class="c-step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="c-step" id="cStep4"><span class="c-num">4</span> Confirmation</div>
+      </div>
+
+      <div class="checkout-body-content">
+        
+        <!-- STEP 1: Selection Review & VIP Add-ons -->
+        <div class="checkout-pane active" id="checkoutPane1">
+          <h3 class="checkout-pane-title">Review Your Reservation</h3>
+          
+          <div class="checkout-summary-card glass-card">
+            <div class="chk-item-row">
+              <img src="" alt="Booking Item" class="chk-item-img" id="chkItemImg">
+              <div class="chk-item-info">
+                <span class="chk-type-tag" id="chkItemType">LUXURY STAY</span>
+                <h4 class="chk-item-title" id="chkItemTitle">Burj Al Arab Jumeirah</h4>
+                <p class="chk-item-sub" id="chkItemSub">Deluxe Ocean Suite &bull; 3 Nights &bull; 2 Guests</p>
+                <div class="chk-item-date" id="chkItemDates"><i class="fa-regular fa-calendar"></i> Oct 12 &ndash; Oct 15, 2026</div>
+              </div>
+              <div class="chk-item-price">
+                <span class="chk-price-label">Total Amount</span>
+                <strong class="chk-price-num text-gold" id="chkItemPrice">$6,830</strong>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="checkout-section-subhead mt-4">Elevate Your Journey (VIP Add-ons)</h4>
+          <div class="checkout-addons-list">
+            <label class="addon-checkbox-card">
+              <input type="checkbox" id="addonTransfer" checked>
+              <div class="addon-info">
+                <strong><i class="fa-solid fa-car text-gold"></i> VIP Rolls-Royce Chauffeur Airport Transfer</strong>
+                <span>Direct airport terminal tarmac meet & greet with luxury chauffeur.</span>
+              </div>
+              <span class="addon-price">+$180</span>
+            </label>
+
+            <label class="addon-checkbox-card">
+              <input type="checkbox" id="addonInsurance">
+              <div class="addon-info">
+                <strong><i class="fa-solid fa-shield-halved text-gold"></i> Comprehensive Voyager Travel & Medical Protection</strong>
+                <span>Full coverage for flight delays, trip interruption, and medical concierge.</span>
+              </div>
+              <span class="addon-price">+$85</span>
+            </label>
+
+            <label class="addon-checkbox-card">
+              <input type="checkbox" id="addonCarbon">
+              <div class="addon-info">
+                <strong><i class="fa-solid fa-leaf text-gold"></i> 100% Certified Carbon Neutral Offset</strong>
+                <span>Support verified high-integrity rainforest restoration projects.</span>
+              </div>
+              <span class="addon-price">+$25</span>
+            </label>
+          </div>
+
+          <div class="checkout-footer-nav mt-4">
+            <div></div>
+            <button class="btn btn-gold btn-large" id="chkGotoStep2Btn">
+              <span>Continue to Traveler Details</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Traveler Details -->
+        <div class="checkout-pane" id="checkoutPane2">
+          <h3 class="checkout-pane-title">Lead Traveler Information</h3>
+          <p class="checkout-pane-sub">Please enter details exactly as they appear on your government passport.</p>
+
+          <form class="traveler-form-grid" id="checkoutTravelerForm">
+            <div class="form-group">
+              <label for="chkFirstName">First Name *</label>
+              <input type="text" id="chkFirstName" value="Alexander" required>
+            </div>
+            <div class="form-group">
+              <label for="chkLastName">Last Name *</label>
+              <input type="text" id="chkLastName" value="Wright" required>
+            </div>
+            <div class="form-group">
+              <label for="chkEmail">Email Address (for booking confirmation) *</label>
+              <input type="email" id="chkEmail" value="alexander.wright@elitevoyager.com" required>
+            </div>
+            <div class="form-group">
+              <label for="chkPhone">Mobile Phone (with country code) *</label>
+              <input type="tel" id="chkPhone" value="+1 (555) 382-9901" required>
+            </div>
+            <div class="form-group">
+              <label for="chkPassport">Passport Country</label>
+              <input type="text" id="chkPassport" value="United States">
+            </div>
+            <div class="form-group">
+              <label for="chkSpecialRequests">Special Requests & Dietary (Optional)</label>
+              <input type="text" id="chkSpecialRequests" placeholder="e.g. High floor, champagne chilled on arrival, late check-in">
+            </div>
+          </form>
+
+          <div class="checkout-footer-nav mt-4">
+            <button class="btn btn-ghost" id="chkBackToStep1Btn">
+              <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+            <button class="btn btn-gold btn-large" id="chkGotoStep3Btn">
+              <span>Proceed to Payment</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Payment & Final Review -->
+        <div class="checkout-pane" id="checkoutPane3">
+          <h3 class="checkout-pane-title">Payment & Authorization</h3>
+
+          <div class="checkout-payment-grid">
+            
+            <div class="payment-methods-col">
+              <div class="payment-method-selector">
+                <label class="pay-method-card active">
+                  <input type="radio" name="payMethod" value="card" checked>
+                  <span class="pay-icon"><i class="fa-regular fa-credit-card"></i></span>
+                  <div class="pay-meta">
+                    <strong>Credit / Debit Card</strong>
+                    <span>Visa, Mastercard, Amex, Diners</span>
+                  </div>
+                </label>
+
+                <label class="pay-method-card">
+                  <input type="radio" name="payMethod" value="applepay">
+                  <span class="pay-icon"><i class="fa-brands fa-apple"></i></span>
+                  <div class="pay-meta">
+                    <strong>Apple Pay / Google Pay</strong>
+                    <span>Instant 1-Touch Authorization</span>
+                  </div>
+                </label>
+
+                <label class="pay-method-card">
+                  <input type="radio" name="payMethod" value="wire">
+                  <span class="pay-icon"><i class="fa-solid fa-building-columns"></i></span>
+                  <div class="pay-meta">
+                    <strong>Private Wire / Bank Transfer</strong>
+                    <span>For bookings exceeding $10,000</span>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Card Input Fields -->
+              <div class="card-inputs-box glass-card mt-3">
+                <div class="form-group">
+                  <label for="chkCardNumber">Card Number</label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-credit-card"></i>
+                    <input type="text" id="chkCardNumber" placeholder="4242 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 4242" maxlength="19" value="4242 8901 2345 6789">
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="chkCardExp">Expiry Date</label>
+                    <input type="text" id="chkCardExp" placeholder="MM / YY" maxlength="5" value="09/28">
+                  </div>
+                  <div class="form-group">
+                    <label for="chkCardCvv">Security Code (CVV)</label>
+                    <input type="password" id="chkCardCvv" placeholder="123" maxlength="4" value="892">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="chkCardName">Name on Card</label>
+                  <input type="text" id="chkCardName" value="ALEXANDER WRIGHT">
+                </div>
+              </div>
+
+              <label class="terms-agree-checkbox mt-3">
+                <input type="checkbox" id="chkTermsCheckbox" checked>
+                <span>I agree to the luxury cancellation terms, privacy policies, and verified booking guarantees of Aurora Travel.</span>
+              </label>
+            </div>
+
+            <!-- Grand Total Breakdown Column -->
+            <div class="payment-summary-col">
+              <div class="order-summary-box glass-card">
+                <h4>Payment Summary</h4>
+                <div class="order-summary-row">
+                  <span id="orderBaseLabel">Base Reservation</span>
+                  <span id="orderBasePrice">$6,830</span>
+                </div>
+                <div class="order-summary-row">
+                  <span>Selected VIP Add-ons</span>
+                  <span id="orderAddonsPrice">$180</span>
+                </div>
+                <div class="order-summary-row">
+                  <span>Aurora Voyager Discount</span>
+                  <span class="text-gold" id="orderDiscountPrice">-$250</span>
+                </div>
+                <div class="order-summary-row">
+                  <span>Estimated Taxes & Fees</span>
+                  <span>Included</span>
+                </div>
+                <hr class="calc-hr">
+                <div class="order-summary-row order-grand-total">
+                  <strong>Total to Pay Now</strong>
+                  <strong class="grand-total-amount text-gradient-gold" id="orderGrandTotal">$6,760</strong>
+                </div>
+
+                <button class="btn btn-gold btn-block btn-large mt-4" id="chkAuthorizePaymentBtn">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>Authorize &amp; Confirm Booking</span>
+                </button>
+
+                <div class="payment-secure-badges mt-3">
+                  <span><i class="fa-solid fa-shield-halved text-gold"></i> 256-Bit SSL Encrypted</span>
+                  <span><i class="fa-solid fa-lock text-gold"></i> PCI-DSS Compliant</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="checkout-footer-nav mt-4">
+            <button class="btn btn-ghost" id="chkBackToStep2Btn">
+              <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+            <div></div>
+          </div>
+        </div>
+
+        <!-- STEP 4: Confirmation & Receipt -->
+        <div class="checkout-pane" id="checkoutPane4">
+          <div class="confirmation-screen-card text-center">
+            
+            <div class="conf-success-icon-wrap">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <span class="badge-gold-outline"><i class="fa-solid fa-sparkles"></i> RESERVATION CONFIRMED</span>
+            <h2 class="conf-title">Your Journey is Officially Booked.</h2>
+            <p class="conf-subtitle">We have dispatched your flight and haven itineraries to your registered email. Your dedicated personal concierge will connect with you shortly.</p>
+
+            <div class="conf-ticket-card glass-card">
+              <div class="conf-ticket-top">
+                <div class="conf-pnr-group">
+                  <span class="conf-lbl">BOOKING REFERENCE (PNR)</span>
+                  <strong class="conf-pnr-val text-gold" id="confPnrVal">AUR-8942-DXB</strong>
+                </div>
+                <div class="conf-status-group">
+                  <span class="status-pill status-confirmed"><i class="fa-solid fa-circle-check"></i> Confirmed &amp; Ticketed</span>
+                </div>
+              </div>
+
+              <div class="conf-ticket-body">
+                <div class="conf-col">
+                  <span class="conf-lbl">SANCTUARY / FLIGHT</span>
+                  <strong class="conf-val" id="confItemTitle">Burj Al Arab Jumeirah</strong>
+                  <span class="conf-subval" id="confItemSub">Deluxe Ocean Suite &bull; 2 Guests</span>
+                </div>
+                <div class="conf-col">
+                  <span class="conf-lbl">PRIMARY TRAVELER</span>
+                  <strong class="conf-val" id="confTravelerName">Alexander Wright</strong>
+                  <span class="conf-subval" id="confTravelerEmail">alexander.wright@elitevoyager.com</span>
+                </div>
+                <div class="conf-col">
+                  <span class="conf-lbl">TOTAL PAID</span>
+                  <strong class="conf-val text-gold" id="confTotalPaid">$6,760 USD</strong>
+                  <span class="conf-subval">All Taxes &amp; Chauffeur Included</span>
+                </div>
+              </div>
+
+              <div class="conf-ticket-qr-row">
+                <div class="mock-qr-code">
+                  <i class="fa-solid fa-qrcode"></i>
+                </div>
+                <div class="qr-info">
+                  <strong>Digital Boarding & Check-in Pass</strong>
+                  <p>Present this reference code or digital pass at airport lounges and resort reception for expedited VIP arrival.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="conf-actions-row mt-4">
+              <button class="btn btn-gold" id="confPrintReceiptBtn">
+                <i class="fa-solid fa-print"></i> Print Receipt &amp; Voucher
+              </button>
+              <button class="btn btn-glass" id="confAddCalendarBtn">
+                <i class="fa-solid fa-calendar-plus"></i> Add to Calendar
+              </button>
+              <button class="btn btn-glass" id="confViewDashboardBtn">
+                <i class="fa-solid fa-id-card"></i> View in Dashboard
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTHENTICATION / LOGIN / SIGNUP MODAL -->
+  <div class="modal-backdrop" id="authModalBackdrop" aria-hidden="true">
+    <div class="modal-card modal-auth" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+      <button class="modal-close-btn" id="closeAuthModalBtn" aria-label="Close Authentication">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="auth-header text-center">
+        <div class="auth-brand-symbol">
+          <i class="fa-solid fa-compass-drafting text-gold"></i>
+        </div>
+        <h3 class="auth-title" id="authModalTitle">Welcome to Aurora Travel</h3>
+        <p class="auth-subtitle" id="authModalSubtitle">Sign in to access your bespoke itineraries and Black Diamond privileges.</p>
+      </div>
+
+      <!-- Auth Tabs: Login vs Register -->
+      <div class="auth-tabs-row">
+        <button class="auth-tab active" id="authTabLogin" data-mode="login">Sign In</button>
+        <button class="auth-tab" id="authTabRegister" data-mode="register">Join The Collective</button>
+      </div>
+
+      <!-- Quick Demo Login Button -->
+      <div class="demo-login-box">
+        <button class="btn btn-glass btn-block btn-demo-login" id="demoLoginBtn">
+          <i class="fa-solid fa-bolt text-gold"></i>
+          <span>1-Click Demo Sign In: Alexander Wright (VIP)</span>
+        </button>
+      </div>
+
+      <div class="auth-divider">
+        <span>or continue with email</span>
+      </div>
+
+      <!-- Auth Form -->
+      <form class="auth-form" id="authForm" onsubmit="event.preventDefault(); window.AuroraApp.handleAuthSubmit();">
+        
+        <!-- Registration Full Name (Hidden in login) -->
+        <div class="form-group" id="authNameGroup" style="display: none;">
+          <label for="authFullNameInput">Full Name</label>
+          <input type="text" id="authFullNameInput" placeholder="e.g. Lady Victoria Spencer">
+        </div>
+
+        <div class="form-group">
+          <label for="authEmailInput">Email Address</label>
+          <input type="email" id="authEmailInput" placeholder="name@example.com" value="alexander.wright@elitevoyager.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="authPasswordInput">Password</label>
+          <input type="password" id="authPasswordInput" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" value="LuxuryVoyager2026!" required>
+        </div>
+
+        <div class="auth-options-row">
+          <label class="remember-me">
+            <input type="checkbox" id="authRememberMe" checked>
+            <span>Remember this device</span>
+          </label>
+          <a href="#top" class="forgot-link" id="authForgotLink">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block btn-large mt-3" id="authSubmitBtn">
+          Sign In to Aurora
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ARTICLE READER MODAL -->
+  <div class="modal-backdrop" id="articleModalBackdrop" aria-hidden="true">
+    <div class="modal-card modal-large" id="articleModal" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="closeArticleModalBtn" aria-label="Close Article">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="article-modal-body" id="articleModalContent">
+        <!-- Dynamically rendered via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE FILM / VIDEO MODAL -->
+  <div class="modal-backdrop" id="videoModalBackdrop" aria-hidden="true">
+    <div class="modal-card modal-video" id="videoModal" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="closeVideoModalBtn" aria-label="Close Video">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="video-embed-container">
+        <iframe id="experienceVideoIframe" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?autoplay=0&controls=1&rel=0" title="Aurora Travel Experience Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-caption-bar">
+        <h4>AURORA TRAVEL: The Art of Haute Discovery</h4>
+        <p>A cinematic celebration of our private atoll sanctuaries, alpine chalets, and private aviation connections worldwide.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHARE STORY MODAL -->
+  <div class="modal-backdrop" id="shareStoryModalBackdrop" aria-hidden="true">
+    <div class="modal-card" id="shareStoryModal" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="closeShareStoryModalBtn" aria-label="Close Share Story">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="share-story-header">
+        <h3 class="modal-title">Share Your Travel Story</h3>
+        <p class="modal-sub">Submit your dispatch to the Aurora Traveler Community.</p>
+      </div>
+      <form class="share-story-form" id="shareStoryForm" onsubmit="event.preventDefault(); window.AuroraApp.handleStorySubmit();">
+        <div class="form-group">
+          <label for="storyAuthor">Your Name</label>
+          <input type="text" id="storyAuthor" value="Alexander Wright" required>
+        </div>
+        <div class="form-group">
+          <label for="storyLocation">Destination Visited</label>
+          <input type="text" id="storyLocation" placeholder="e.g. Kyoto, Japan or Amalfi Coast" required>
+        </div>
+        <div class="form-group">
+          <label for="storyImage">Cover Photo URL (Unsplash or direct link)</label>
+          <input type="url" id="storyImage" placeholder="https://images.unsplash.com/..." value="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80">
+        </div>
+        <div class="form-group">
+          <label for="storyText">Your Story / Review</label>
+          <textarea id="storyText" rows="4" placeholder="Tell fellow travelers what made this journey so unforgettable..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block mt-3">Post Story to Community</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATIONS CONTAINER -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- PRIMARY JAVASCRIPT APP ENGINE -->
+  <script src="app.js"></script>
+</body>
+</html>
